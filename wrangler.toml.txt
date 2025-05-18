@@ -1,0 +1,14 @@
+name = "sync-demo-site"
+type = "javascript"
+compatibility_date = "2025-05-17"
+
+[build]
+command = "npm run build"
+upload.format = "directory"
+upload.dir = ".next"
+
+[env.production]
+vars = {
+  NEXT_PUBLIC_SUPABASE_URL = "https://mhrmfdbpcfqsyhmvkstt.supabase.co"
+  # Do NOT store secrets like this — use `wrangler secret` instead
+}
